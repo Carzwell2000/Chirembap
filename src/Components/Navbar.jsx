@@ -6,8 +6,18 @@ const AdminNavbar = ({ onMenuClick }) => {
 
     return (
         <nav className="bg-teal-600 p-4 shadow-md flex items-center justify-between sticky top-0 z-10">
-            {/* Left: Logo only (icon removed) */}
+            {/* Left: Hamburger Menu + Logo */}
             <div className="flex items-center space-x-3">
+                {/* Hamburger menu (mobile view) */}
+                <button
+                    onClick={onMenuClick}
+                    className="md:hidden text-white text-2xl font-bold px-2 focus:outline-none"
+                    aria-label="Toggle sidebar"
+                >
+                    ☰
+                </button>
+
+                {/* App title */}
                 <Link to="/" className="text-xl font-bold text-white">
                     My Health System
                 </Link>
@@ -31,3 +41,4 @@ const AdminNavbar = ({ onMenuClick }) => {
 };
 
 export default AdminNavbar;
+
