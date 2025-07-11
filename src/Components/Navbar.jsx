@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,36 +6,16 @@ const AdminNavbar = ({ onMenuClick }) => {
 
     return (
         <nav className="bg-teal-600 p-4 shadow-md flex items-center justify-between sticky top-0 z-10">
-            {/* Left: Hamburger Menu + Logo */}
+            {/* Left: Logo only (icon removed) */}
             <div className="flex items-center space-x-3">
-                <button
-                    onClick={onMenuClick}
-                    className="md:hidden text-white p-2 rounded hover:bg-teal-700 focus:outline-none"
-                    aria-label="Toggle menu"
-                >
-                    <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-                </button>
-
                 <Link to="/" className="text-xl font-bold text-white">
                     My Health System
                 </Link>
             </div>
 
-            {/* Right: User Info + Icons + Logout */}
+            {/* Right: User Info + Logout */}
             <div className="flex items-center gap-8">
-                <span className="hidden sm:inline text-white text-sm md:text-base">
+                <span className="text-white text-sm md:text-base">
                     Welcome, <span className="font-semibold">{userName}</span>
                 </span>
 
@@ -47,7 +26,6 @@ const AdminNavbar = ({ onMenuClick }) => {
                     Logout
                 </Link>
             </div>
-
         </nav>
     );
 };
