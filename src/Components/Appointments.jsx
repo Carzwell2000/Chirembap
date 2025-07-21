@@ -119,7 +119,7 @@ const Appointments = () => {
     }, []);
 
     return (
-        <div className="bg-white p-8 rounded-lg shadow-xl relative">
+        <div className="bg-white p-8 rounded-lg shadow-xl relative  flex-1">
             <h2 className="text-2xl font-semibold text-gray-700 mb-4">Upcoming Appointments</h2>
 
             {loading ? (
@@ -150,12 +150,12 @@ const Appointments = () => {
                                         <td className="px-6 py-4 text-sm text-gray-600">{appt.reason}</td>
                                         <td className="px-6 py-4 text-sm">
                                             <span className={`px-2 inline-flex text-xs font-semibold rounded-full ${isPending
-                                                    ? 'bg-yellow-100 text-yellow-800'
-                                                    : appt.status === 'Confirmed'
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : appt.status === 'Rescheduled'
-                                                            ? 'bg-blue-100 text-blue-800'
-                                                            : 'bg-red-100 text-red-800'
+                                                ? 'bg-yellow-100 text-yellow-800'
+                                                : appt.status === 'Confirmed'
+                                                    ? 'bg-green-100 text-green-800'
+                                                    : appt.status === 'Rescheduled'
+                                                        ? 'bg-blue-100 text-blue-800'
+                                                        : 'bg-red-100 text-red-800'
                                                 }`}>
                                                 {appt.status}
                                             </span>

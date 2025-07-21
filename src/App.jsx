@@ -14,7 +14,7 @@ import ViewPharmacies from './pages/ViewPharmacies';
 import Appointments from './Components/Appointments';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Logout from './pages/Logout'; // ✅ Added
+
 
 // Dummy auth check
 const isAuthenticated = () => !!localStorage.getItem('accessToken');
@@ -32,7 +32,7 @@ function App() {
         {/* Public */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/logout" element={<Logout />} /> {/* ✅ Logout Route */}
+
 
         {/* Protected Dashboard */}
         <Route
