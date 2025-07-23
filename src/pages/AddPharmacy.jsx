@@ -3,7 +3,7 @@ import { supabase } from '../Components/supabaseClient';
 
 const AddPharmacy = () => {
     const [formData, setFormData] = useState({
-        name: '',
+        pharmacy_name: '',
         address: '',
         city: '',
         state: '',
@@ -27,7 +27,7 @@ const AddPharmacy = () => {
         const { data, error } = await supabase
             .from('Pharmacies')
             .insert([{
-                Name: formData.name,
+                Pharmacy_name: formData.pharmacy_name,
                 Address: formData.address,
                 City: formData.city,
                 State: formData.state,
@@ -43,7 +43,7 @@ const AddPharmacy = () => {
         } else {
             alert('✅ Pharmacy added successfully!');
             setFormData({
-                name: '',
+                pharmacy_name: '',
                 address: '',
                 city: '',
                 state: '',
@@ -64,7 +64,7 @@ const AddPharmacy = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     {[
-                        { label: "Pharmacy Name", id: "name", required: true, placeholder: "MediCare Pharmacy" },
+                        { label: "Pharmacy Name", id: "pharmacy_name", required: true, placeholder: "MediCare Pharmacy" },
                         { label: "Address", id: "address", required: true, placeholder: "123 Pharma Lane" },
                         { label: "Phone Number", id: "phone", required: true, placeholder: "+263 771 234 567" },
                         { label: "Email Address", id: "email", required: false, placeholder: "info@medicare.com", type: "email" },

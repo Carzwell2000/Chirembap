@@ -61,6 +61,27 @@ const Sidebar = () => {
                         View Pharmacies
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        to="/dashboard/add-products" // ✅ Fixed path
+                        className={({ isActive }) =>
+                            `block py-2.5 px-4 rounded transition duration-200 ${isActive ? activeLinkClasses : normalLinkClasses}`
+                        }
+                    >
+                        Add products
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink
+                        to="/dashboard/view-products" // ✅ Fixed path
+                        className={({ isActive }) =>
+                            `block py-2.5 px-4 rounded transition duration-200 ${isActive ? activeLinkClasses : normalLinkClasses}`
+                        }
+                    >
+                        View products
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );

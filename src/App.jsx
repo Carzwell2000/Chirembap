@@ -14,6 +14,8 @@ import ViewPharmacies from './pages/ViewPharmacies';
 import Appointments from './Components/Appointments';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AddProducts from './pages/Addproducts';
+import Viewproducts from './pages/Viewproducts';
 
 
 // Dummy auth check
@@ -48,6 +50,9 @@ function App() {
           <Route path="view-doctors" element={<ViewDoctors />} />
           <Route path="add-pharmacy" element={<AddPharmacy />} />
           <Route path="view-pharmacies" element={<ViewPharmacies />} />
+          <Route path="add-products" element={<AddProducts />} />
+          <Route path="view-products" element={<Viewproducts />} />
+
         </Route>
 
         {/* Catch-all */}
