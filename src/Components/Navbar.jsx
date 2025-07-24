@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useUser } from '../Contexts/UserContext';
 import { signOut } from 'firebase/auth';
 import auth from '../Components/firebaseConfig';
 
 const AdminNavbar = ({ onMenuClick }) => {
+    const { user } = useUser();
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
 
@@ -35,7 +37,7 @@ const AdminNavbar = ({ onMenuClick }) => {
 
                 <div className="flex items-center gap-8">
                     <span className="text-white text-sm md:text-base">
-                        Welcome
+                        Welcome, <span className="font-semibold">{user?.name || 'User'}</span>
                     </span>
 
                     <button
@@ -78,3 +80,4 @@ const AdminNavbar = ({ onMenuClick }) => {
 };
 
 export default AdminNavbar;
+
