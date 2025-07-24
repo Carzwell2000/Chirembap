@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { UserProvider } from './Context/Usercontext';
-import './firebase/firebaseConfig'; // Ensures Firebase is initialized
+import { UserProvider } from './Context/UserContext';
+import './firebase/firebaseConfig';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
